@@ -31,8 +31,7 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val newPosition = position+1
-        holder.itemText.text = "Item " + newPosition.toString()
+        holder.itemText.text = "Item " + position.toString()
 
         holder.itemText.setOnClickListener {
 
