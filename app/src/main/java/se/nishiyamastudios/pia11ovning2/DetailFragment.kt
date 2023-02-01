@@ -5,12 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 
-class StartFragment : Fragment() {
-
-    var itemadapter = ItemAdapter()
+class DetailFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,16 +17,12 @@ class StartFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_start, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_detail, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val itemRecview = view.findViewById<RecyclerView>(R.id.itemsRV)
-
-        itemRecview.adapter = itemadapter
-        itemRecview.layoutManager = LinearLayoutManager(activity)
 
     }
 }
